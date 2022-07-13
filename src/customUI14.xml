@@ -1,0 +1,335 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="Macros" label="Macros" keytip="C">
+        <group id="ShapeProperties" label="Shape Properties">
+          <button id="ButtonCopyProperties" label="Copy"
+                  supertip="Copies properties, including size, position and rotation, of the selected shape."
+                  keytip="C" imageMso="PickUpStyle" size="large" onAction="ButtonCopyProperties" />
+          <menu id="PasteMenu" label="Apply"
+                supertip="Apply copied shape's properties to all selected shapes." size="large"
+                keytip="V" imageMso="PasteApplyStyle">
+            <button id="ButtonPasteAll" label="Position &amp;and Size"
+                    screentip="Paste Position and Size" imageMso="SizeToGridOutlook"
+                    supertip="Apply the top left position and the height and width of the copied shape to all selected shapes."
+                    onAction="ButtonPasteAll" />
+            <menuSeparator id="PastePosition" title="Paste Position" />
+            <button id="ButtonPasteTopLeft" label="Top Left Position (&amp;V)"
+                    screentip="Paste Top Left Position" imageMso="ControlAlignToGrid"
+                    supertip="Apply the top left position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteTopLeft" />
+            <button id="ButtonPasteTop" label="&amp;Top Position" screentip="Paste Top Position"
+                    imageMso="ObjectNudgeUp"
+                    supertip="Apply the top position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteTop" />
+            <button id="ButtonPasteBottom" label="&amp;Bottom Position"
+                    screentip="Paste Bottom Position" imageMso="ObjectNudgeDown"
+                    supertip="Apply the bottom position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteBottom" />
+            <button id="ButtonPasteLeft" label="Le&amp;ft Position" screentip="Paste Left Position"
+                    imageMso="ObjectNudgeLeft"
+                    supertip="Apply the left position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteLeft" />
+            <button id="ButtonPasteRight" label="&amp;Right Position"
+                    screentip="Paste Right Position" imageMso="ObjectNudgeRight"
+                    supertip="Apply the right position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteRight" />
+            <menuSeparator id="PastePositionLine" />
+            <button id="ButtonPasteCenter" label="&amp;Center Position"
+                    screentip="Paste Center Position" imageMso="ObjectsAlignCenterHorizontal"
+                    supertip="Apply the center position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteCenter" />
+            <button id="ButtonPasteMiddle" label="Mi&amp;ddle Position"
+                    screentip="Paste Middle Position" imageMso="ObjectsAlignMiddleVertical"
+                    supertip="Apply the middle position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteMiddle" />
+            <button id="ButtonPasteCenterMiddle" label="&amp;Midpoint"
+                    screentip="Paste Midpoint Position" imageMso="ContextMenuGuide"
+                    supertip="Apply the midpoint position of the copied shape to all selected shapes."
+                    onAction="ButtonPasteCenterMiddle" />
+            <menuSeparator id="PasteSize" title="Paste Size" />
+            <button id="ButtonPasteHeight" label="&amp;Height" screentip="Paste Height"
+                    imageMso="RowHeight"
+                    supertip="Apply the height of the copied shape to all selected shapes."
+                    onAction="ButtonPasteHeight" />
+            <button id="ButtonPasteWidth" label="&amp;Width" screentip="Paste Width"
+                    imageMso="ColumnWidth"
+                    supertip="Apply the width of the copied shape to all selected shapes."
+                    onAction="ButtonPasteWidth" />
+            <button id="ButtonPasteSize" label="&amp;Size" screentip="Paste Size"
+                    imageMso="DrawingCanvasFit"
+                    supertip="Apply the height and width of the copied shape to all selected shapes."
+                    onAction="ButtonPasteSize" />
+            <menuSeparator id="PasteOther" title="Paste Other" />
+            <button id="ButtonPasteRotation" label="R&amp;otation"
+                    screentip="Paste Rotation" imageMso="ObjectRotateFree"
+                    supertip="Apply the rotation of the copied shape to all selected shapes. Supports lines facing in the same direction."
+                    onAction="ButtonPasteRotation" />
+            <button id="ButtonPasteAdjustments" label="Ad&amp;justments"
+                    screentip="Paste Yellow-Handle Adjustments" imageMso="ShapeStar"
+                    supertip="Apply the yellow-handle adjustments of the copied shape to all selected shapes."
+                    onAction="ButtonPasteAdjustments" />
+            <button id="ButtonPasteArea" label="Logo Si&amp;ze" screentip="Paste Area"
+                    imageMso="ApplyImageBackgroundTile"
+                    supertip="Apply the area of the copied shape to all selected shapes while maintaining their aspect ratio."
+                    onAction="ButtonPasteArea" />
+            <button id="ButtonPasteMargins" label="Text Mar&amp;gins" screentip="Paste Text Margins"
+                    imageMso="ControlMarginsWide"
+                    supertip="Apply the text margins of the copied shape to all selected shapes."
+                    onAction="ButtonPasteMargins" />
+          </menu>
+          <separator id="separatorShapeProperties" />
+          <menu id="ConformMenu" label="Conform"
+                supertip="Select any number of shapes. Applies the chosen property of the first shape to all others."
+                size="large" keytip="F" imageMso="PasteDuplicate">
+            <menuSeparator id="ConformPosition" title="Conform Position" />
+            <button id="ButtonConformTop" label="&amp;Top Position" screentip="Conform Top Position"
+                    imageMso="ObjectsAlignTop"
+                    supertip="Select any number of shapes. Applies the top position of the first shape to all others."
+                    onAction="ButtonConformTop" />
+            <button id="ButtonConformBottom" label="&amp;Bottom Position"
+                    screentip="Conform Bottom Position" imageMso="ObjectsAlignBottom"
+                    supertip="Select any number of shapes. Applies the bottom position of the first shape to all others."
+                    onAction="ButtonConformBottom" />
+            <button id="ButtonConformLeft" label="Le&amp;ft Position"
+                    screentip="Conform Left Position" imageMso="ObjectsAlignLeft"
+                    supertip="Select any number of shapes. Applies the left position of the first shape to all others."
+                    onAction="ButtonConformLeft" />
+            <button id="ButtonConformRight" label="&amp;Right Position"
+                    screentip="Conform Right Position" imageMso="ObjectsAlignRight"
+                    supertip="Select any number of shapes. Applies the right position of the first shape to all others."
+                    onAction="ButtonConformRight" />
+            <menuSeparator id="ConformPositionLine" />
+            <button id="ButtonConformCenter" label="&amp;Center Position"
+                    screentip="Center Vertically" imageMso="ObjectsAlignCenterHorizontal"
+                    supertip="Center selected shapes vertically against the first one selected."
+                    onAction="ButtonConformCenter" />
+            <button id="ButtonConformMiddle" label="Mi&amp;ddle Position"
+                    screentip="Center Horizontally" imageMso="ObjectsAlignMiddleVertical"
+                    supertip="Center selected shapes horizontally against the first one selected."
+                    onAction="ButtonConformMiddle" />
+            <button id="ButtonConformMidpoint" label="&amp;Midpoint" screentip="Center on Midpoint"
+                    imageMso="ContextMenuGuide"
+                    supertip="Center selected shapes on the midpoint of the first one selected."
+                    onAction="ButtonConformMidpoint" />
+            <menuSeparator id="ConformSize" title="Conform Size" />
+            <button id="ButtonConformHeight" label="&amp;Height" screentip="Conform Height"
+                    imageMso="RowHeight"
+                    supertip="Select any number of shapes. Applies the height of the first shape to all others."
+                    onAction="ButtonConformHeight" />
+            <button id="ButtonConformWidth" label="&amp;Width" screentip="Conform Width"
+                    imageMso="ColumnWidth"
+                    supertip="Select any number of shapes. Applies the width of the first shape to all others."
+                    onAction="ButtonConformWidth" />
+            <button id="ButtonConformSize" label="&amp;Size" screentip="Conform Size"
+                    imageMso="DrawingCanvasFit"
+                    supertip="Select any number of shapes. Applies the height and width of the first shape to all others."
+                    onAction="ButtonConformSize" />
+            <menuSeparator id="ConformOther" title="Conform Other" />
+            <button id="ButtonConformRotation" label="R&amp;otation" screentip="Conform Rotation"
+                    imageMso="ObjectRotateFree"
+                    supertip="Select any number of shapes. Applies the rotation of the first shape to all others."
+                    onAction="ButtonConformRotation" />
+            <button id="ButtonConformAdjustments" label="Ad&amp;justments"
+                    screentip="Conform Yellow-Handle Adjustments" imageMso="ShapeStar"
+                    supertip="Select any number of shapes. Applies the yellow-handle adjustments of the first shape to all others."
+                    onAction="ButtonConformAdjustments" />
+            <button id="ButtonConformArea" label="Logo Si&amp;ze" screentip="Conform Logo Size"
+                    imageMso="ApplyImageBackgroundTile"
+                    supertip="Select any number of images. Resizes all images to match the area of the first image while maintaining aspect ratios."
+                    onAction="ButtonConformArea" />
+          </menu>
+        </group>
+        <group id="SwapGroup" label="Swap">
+          <menu id="SwapMenu" label="Swap" supertip="Swap the position of two selected shapes."
+                size="large" keytip="W" imageMso="CircularReferences">
+            <button id="ButtonSwapCM" label="Midpoint (&amp;W)" screentip="Anchor Midpoint"
+                    image="SwapCM"
+                    supertip="Swap two selected shapes, anchoring on the midpoint of each."
+                    onAction="ButtonSwapCM" />
+            <menuSeparator id="SwapSeparator1" />
+            <button id="ButtonSwapTL" label="Top Left (&amp;1)" screentip="Anchor Top Left"
+                    image="SwapTL"
+                    supertip="Swap two selected shapes, anchoring on the top left corner of each."
+                    onAction="ButtonSwapTL" />
+            <button id="ButtonSwapTR" label="Top Right (&amp;2)" screentip="Anchor Top Right"
+                    image="SwapTR"
+                    supertip="Swap two selected shapes, anchoring on the top right corner of each."
+                    onAction="ButtonSwapTR" />
+            <button id="ButtonSwapBL" label="Bottom Left (&amp;3)" screentip="Anchor Bottom Left"
+                    image="SwapBL"
+                    supertip="Swap two selected shapes, anchoring on the bottom left corner of each."
+                    onAction="ButtonSwapBL" />
+            <button id="ButtonSwapBR" label="Bottom Right (&amp;4)" screentip="Anchor Bottom Right"
+                    image="SwapBR"
+                    supertip="Swap two selected shapes, anchoring on the bottom right corner of each."
+                    onAction="ButtonSwapBR" />
+            <menuSeparator id="SwapSeparator2" />
+            <button id="ButtonSwapCT" label="&amp;Top" screentip="Anchor Center Top" image="SwapCT"
+                    supertip="Swap two selected shapes, anchoring on the center top position of each."
+                    onAction="ButtonSwapCT" />
+            <button id="ButtonSwapCB" label="&amp;Bottom" screentip="Anchor Center Bottom"
+                    image="SwapCB"
+                    supertip="Swap two selected shapes, anchoring on the center bottom position of each."
+                    onAction="ButtonSwapCB" />
+            <button id="ButtonSwapML" label="Le&amp;ft" screentip="Anchor Middle Left"
+                    image="SwapML"
+                    supertip="Swap two selected shapes, anchoring on the middle left position of each."
+                    onAction="ButtonSwapML" />
+            <button id="ButtonSwapMR" label="&amp;Right" screentip="Anchor Middle Right"
+                    image="SwapMR"
+                    supertip="Swap two selected shapes, anchoring on the middle right position of each."
+                    onAction="ButtonSwapMR" />
+            <menuSeparator id="SwapSeparator3" />
+            <button id="ButtonSwapMM" label="Mi&amp;ddle" screentip="Anchor Middle" image="SwapMM"
+                    supertip="Swap two selected shapes, anchoring on the middle position of each."
+                    onAction="ButtonSwapMM" />
+            <button id="ButtonSwapCC" label="&amp;Center" screentip="Anchor Center" image="SwapCC"
+                    supertip="Swap two selected shapes, anchoring on the center position of each."
+                    onAction="ButtonSwapCC" />
+            <menuSeparator id="SwapSeparator4" />
+            <button id="ButtonSwapOV" label="Topmost / Bottommost (&amp;Q)"
+                    screentip="Anchor Top Edge / Bottom Edge" image="SwapOV"
+                    supertip="Swap two selected shapes, maintaining the topmost edge and bottommost edge."
+                    onAction="ButtonSwapOV" />
+            <button id="ButtonSwapOH" label="Leftmost / Rightmost (&amp;A)"
+                    screentip="Anchor Left Edge / Right Edge" image="SwapOH"
+                    supertip="Swap two selected shapes, maintaining the leftmost edge and rightmost edge."
+                    onAction="ButtonSwapOH" />
+          </menu>
+        </group>
+        <group id="Rotate" label="Rotate">
+          <button id="ButtonRotateIncrClockwise" keytip="RR" label="Clockwise"
+                  screentip="Rotate Clockwise" imageMso="Redo"
+                  supertip="Rotate selected shapes by 0.3 degrees clockwise (for micro-adjustments)."
+                  onAction="ButtonRotateIncrClockwise" />
+          <button id="ButtonRotateIncrCounterClockwise" keytip="RF" label="CClockwise"
+                  screentip="Rotate Counterclockwise" imageMso="Undo"
+                  supertip="Rotate selected shapes by 0.3 degrees counterclockwise (for micro-adjustments)."
+                  onAction="ButtonRotateIncrCounterClockwise" />
+          <button id="ButtonRotateStraighten" keytip="RS" label="Straighten"
+                  screentip="Straighten" imageMso="_3DTiltUpClassic"
+                  supertip="Straighten selected shapes. Lines are made vertical or horizontal depending on their current orientation."
+                  onAction="ButtonRotateStraighten" />
+        </group>
+        <group id="Arrange" label="Arrange">
+          <button id="ButtonArrangeVertical" keytip="GV" label="Vertically"
+                  screentip="Arrange Vertically" imageMso="VerticalSpacingIncrease"
+                  supertip="Spread two or more shapes vertically with a specified gap between each. Supports shapes rotated 90 or 270 degrees."
+                  onAction="ButtonArrangeVertical" />
+          <button id="ButtonArrangeHorizontal" keytip="GH" label="Horizontally"
+                  screentip="Arrange Horizontally" imageMso="HorizontalSpacingIncrease"
+                  supertip="Spread two or more shapes horizontally with a specified gap between each. Supports shapes rotated 90 or 270 degrees."
+                  onAction="ButtonArrangeHorizontal" />
+          <button id="ButtonMeasureGap" keytip="GM" label="Measure Gap" screentip="Measure Gap"
+                  imageMso="DesignMode"
+                  supertip="Measure the vertical and horizontal gap between two shapes."
+                  onAction="ButtonMeasureGap" />
+        </group>
+        <group id="Select" label="Select">
+          <menu id="SelectMenu" keytip="T" imageMso="LassoSelect" label="Select Match"
+                size="large"
+                supertip="Select a shape. Selects all other shapes that match the chosen property of the reference shape.">
+            <menuSeparator id="SelectPosition" title="Position" />
+            <button id="ButtonSelectTop" label="&amp;Top" screentip="Top"
+                    imageMso="MessagePrevious"
+                    supertip="Select a shape. Selects all other shapes with the same top position."
+                    onAction="ButtonSelectTop" />
+            <button id="ButtonSelectBottom" label="&amp;Bottom" screentip="Bottom"
+                    imageMso="MessageNext"
+                    supertip="Select a shape. Selects all other shapes with the same bottom position."
+                    onAction="ButtonSelectBottom" />
+            <button id="ButtonSelectLeft" label="Le&amp;ft" screentip="Left"
+                    imageMso="GanttPrevious"
+                    supertip="Select a shape. Selects all other shapes with the same left position."
+                    onAction="ButtonSelectLeft" />
+            <button id="ButtonSelectRight" label="&amp;Right" screentip="Right"
+                    imageMso="GanttNext"
+                    supertip="Select a shape. Selects all other shapes with the same right position."
+                    onAction="ButtonSelectRight" />
+            <menuSeparator id="SelectSize" title="Size" />
+            <button id="ButtonSelectHeight" label="&amp;Height" screentip="Height"
+                    imageMso="RowHeight"
+                    supertip="Select a shape. Selects all other shapes with the same height."
+                    onAction="ButtonSelectHeight" />
+            <button id="ButtonSelectWidth" label="&amp;Width" screentip="Width"
+                    imageMso="ColumnWidth"
+                    supertip="Select a shape. Selects all other shapes with the same width."
+                    onAction="ButtonSelectWidth" />
+            <button id="ButtonSelectSize" label="&amp;Size" screentip="Size"
+                    imageMso="DrawingCanvasFit"
+                    supertip="Select a shape. Selects all other shapes with the same height and width."
+                    onAction="ButtonSelectSize" />
+            <button id="ButtonSelectLogoSize" label="Logo Si&amp;ze (Area)"
+                    screentip="Area" imageMso="ApplyImageBackgroundTile"
+                    supertip="Select a shape. Selects all other shapes with the same area."
+                    onAction="ButtonSelectLogoSize" />
+            <menuSeparator id="SelectFormat" title="Format" />
+            <button id="ButtonSelectShapeType" label="Shape T&amp;ype"
+                    screentip="Shape Type" imageMso="ShapeStar"
+                    supertip="Select a shape. Selects all other shapes that are the same shape type."
+                    onAction="ButtonSelectShapeType" />
+            <button id="ButtonSelectFill" label="Shape Fi&amp;ll" screentip="Shape Fill"
+                    imageMso="ShapeFillColorPickerClassic"
+                    supertip="Select a shape. Selects all other shapes that have the same fill properties."
+                    onAction="ButtonSelectFill" />
+            <button id="ButtonSelectLine" label="L&amp;ine / Shape Outline"
+                    screentip="Line / Shape Outline" imageMso="ControlLineColorPicker"
+                    supertip="Select a shape. Selects all other shapes that have the same outline properties."
+                    onAction="ButtonSelectLine" />
+          </menu>
+        </group>
+        <group id="AddShape" label="Add">
+          <button id="ButtonDrawConnector" keytip="AC" label="Connector" screentip="Add Connector"
+                  imageMso="ConnectorTool" size="large"
+                  supertip="Add an elbow connector between two shapes."
+                  onAction="ButtonDrawConnector" />
+          <button id="ButtonAddNTD" keytip="AN" label="NTD" screentip="Add NTD"
+                  imageMso="ViewNotesShow" size="large" supertip="Add a note-to-draft stamp."
+                  onAction="ButtonAddNTD" />
+          <button id="UFAddMatrix" keytip="AG" label="Grid" imageMso="TableShowGridlines"
+                  size="large"
+                  supertip="Select a shape to act as a container. Creates a textbox grid inside the container, including top and left headers, with the specified number of columns, rows and gap size."
+                  onAction="ButtonUFAddMatrix" />
+        </group>
+        <group id="Chart" label="Chart">
+          <menu id="ChartMenu" keytip="H" imageMso="ChartPlotArea" label="Properties"
+                size="large" supertip="Copy and paste chart properties.">
+            <button id="ButtonChartCopy" label="&amp;Copy Chart Properties"
+                    screentip="Copy Chart Properties" imageMso="PickUpStyle"
+                    supertip="Select a chart. Copies the chart's inner size and position. Slight adjustments may occur to make the properties pasteable."
+                    onAction="ButtonChartCopy" />
+            <button id="ButtonChartPasteAll" label="Paste Plot Area Position &amp;and Size"
+                    supertip="Apply the plot area size and position of the copied chart to all selected charts."
+                    imageMso="SizeToGridOutlook" onAction="ButtonChartPasteAll" />
+            <menuSeparator id="ChartPosition" title="Position" />
+            <button id="ButtonChartPasteTop" label="Paste Plot Area &amp;Top Position"
+                    supertip="Apply the plot area top position of the copied chart to all selected charts."
+                    imageMso="ObjectNudgeUp" onAction="ButtonChartPasteTop" />
+            <button id="ButtonChartPasteBottom" label="Paste Plot Area &amp;Bottom Position"
+                    supertip="Apply the plot area bottom position of the copied chart to all selected charts."
+                    imageMso="ObjectNudgeDown" onAction="ButtonChartPasteBottom" />
+            <button id="ButtonChartPasteLeft" label="Paste Plot Area Le&amp;ft Position"
+                    supertip="Apply the plot area left position of the copied chart to all selected charts."
+                    imageMso="ObjectNudgeLeft" onAction="ButtonChartPasteLeft" />
+            <button id="ButtonChartPasteRight" label="Paste Plot Area &amp;Right Position"
+                    supertip="Apply the plot area right position of the copied chart to all selected charts."
+                    imageMso="ObjectNudgeRight" onAction="ButtonChartPasteRight" />
+            <menuSeparator id="ChartSize" title="Size" />
+            <button id="ButtonChartPasteHeight" label="Paste Plot Area &amp;Height"
+                    supertip="Apply the plot area height of the copied chart to all selected charts."
+                    imageMso="RowHeight" onAction="ButtonChartPasteHeight" />
+            <button id="ButtonChartPasteWidth" label="Paste Plot Area &amp;Width"
+                    supertip="Apply the plot area width of the copied chart to all selected charts."
+                    imageMso="ColumnWidth" onAction="ButtonChartPasteWidth" />
+          </menu>
+        </group>
+        <group id="About" label="About">
+          <button id="version" keytip="8" label="Version 1.0" imageMso="Info" />
+          <button id="learnMore" keytip="9" label="Learn More" imageMso="GoLeftToRight"
+                  onAction="ButtonLearnMore" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
